@@ -4,10 +4,8 @@ import { Link, useParams } from "react-router-dom";
 const Userdetail = () => {
   const [data, setData] = useState({});
   const params = useParams();
-
-  useEffect(() => {
-    fetchData(params);
-  }, [params]);
+console.log(params);
+ 
   async function fetchData(params) {
     try {
       let response = await fetch(`https://reqres.in/api/users/${params.id}`);
@@ -21,7 +19,9 @@ const Userdetail = () => {
   }
   console.log(data,"single data");
 
-
+  useEffect(() => {
+    fetchData(params);
+  }, [params.id]);
   
 
   return (

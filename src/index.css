@@ -53,6 +53,10 @@ input{
   border: 5px solid #ffffff;
   margin: 0px 20px;
 }
+.notfoundImg{
+  max-width: 400px;
+  height: auto;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

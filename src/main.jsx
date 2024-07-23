@@ -1,19 +1,17 @@
-import React, { createContext } from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { Contextprovider } from './Contextprovider.jsx'
-import { AuthContextProvider } from './AuthContextProvider.jsx'
-import { BrowserRouter,Link} from 'react-router-dom'
+import React, { createContext } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
+import Logincontextprovider from "./Logincontext.jsx";
+ 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
+
+<Logincontextprovider>
 <BrowserRouter>
-<App />
 
+<App/>
 </BrowserRouter>
-
-  
-
-   
-  
-)
+</Logincontextprovider>
+);
